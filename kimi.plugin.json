@@ -1,0 +1,36 @@
+{
+  "name": "kimi-computer-use",
+  "version": "0.1.0",
+  "description": "Use an existing OpenAI Computer Use installation from Kimi Code CLI on macOS.",
+  "keywords": [
+    "kimi-code",
+    "computer-use",
+    "macos",
+    "mcp",
+    "desktop-automation"
+  ],
+  "author": {
+    "name": "Songkeys"
+  },
+  "homepage": "https://github.com/songkeys/kimi-computer-use",
+  "license": "MIT",
+  "skills": "./skills/",
+  "sessionStart": {
+    "skill": "computer-use"
+  },
+  "interface": {
+    "displayName": "Kimi Computer Use",
+    "shortDescription": "Control macOS apps through an existing OpenAI Computer Use installation",
+    "longDescription": "An experimental bridge that exposes the locally installed OpenAI Computer Use MCP service to Kimi Code CLI on macOS.",
+    "developerName": "Songkeys",
+    "websiteURL": "https://github.com/songkeys/kimi-computer-use"
+  },
+  "mcpServers": {
+    "computer-use": {
+      "command": "node",
+      "args": [
+        "./bin/computer-use-mcp-bridge.mjs"
+      ]
+    }
+  }
+}
