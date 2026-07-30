@@ -29,7 +29,7 @@
   ],
   "type": "module",
   "bin": {
-    "kimi-computer-use": "./bin/computer-use-mcp-bridge.mjs"
+    "kimi-computer-use": "bin/computer-use-mcp-bridge.mjs"
   },
   "engines": {
     "node": ">=22.14.0"
