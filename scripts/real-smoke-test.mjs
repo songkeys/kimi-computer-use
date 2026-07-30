@@ -7,11 +7,9 @@ import path from "node:path";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const pluginRoot = path.resolve(scriptDir, "..");
-const bridgePath = path.join(
-  pluginRoot,
-  "bin",
-  "computer-use-mcp-bridge.mjs",
-);
+const bridgePath =
+  process.env.KIMI_COMPUTER_USE_BRIDGE_PATH ??
+  path.join(pluginRoot, "bin", "computer-use-mcp-bridge.mjs");
 
 function createMessageReader(stream) {
   let buffer = "";
